@@ -6,12 +6,20 @@
 // =========================
 // Hardware pin definition
 // =========================
+#if defined(CONFIG_IDF_TARGET_ESP32S3)
+static constexpr uint8_t JOY_X_PIN  = 4;
+static constexpr uint8_t JOY_Y_PIN  = 5;
+static constexpr uint8_t JOY_SW_PIN = 6;
+static constexpr uint8_t BTN1_PIN   = 7;
+static constexpr uint8_t BTN2_PIN   = 1;
+static constexpr uint8_t BATTERY_ADC_PIN = 2;
+#else
 static constexpr uint8_t JOY_X_PIN  = 34;
 static constexpr uint8_t JOY_Y_PIN  = 35;
 static constexpr uint8_t JOY_SW_PIN = 25;
 static constexpr uint8_t BTN1_PIN   = 26;
 static constexpr uint8_t BTN2_PIN   = 27;
-
+#endif
 // =========================
 // BLE UUID definition
 // =========================
